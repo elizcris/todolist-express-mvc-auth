@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const connectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.DB_STRING, {
+      //with the newer updates to MongoDB, we don't need a a lot of these items below now, can update this
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
